@@ -1,0 +1,23 @@
+.process-list{
+  position: relative;
+  margin: 100px auto 0;
+
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    li{
+
+      b{
+        width: 12px;
+        height: 12px;
+        display: block;
+        position: relative;
+        border-radius: 12px;
+        border: 1px solid #1863A6;
+        box-sizing: border-box;
+      }
+    }
+  }
+}

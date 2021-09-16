@@ -1,0 +1,87 @@
+.octopus{
+  width: 1114px;
+  position: relative;
+  margin: 150px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .octopus-content{
+    width: 510px;
+
+    p{
+      margin-bottom: 20px;
+      font-family: BM HANNA;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 48px;
+      color: #1863A6;
+    }
+    span{
+      font-family: Paytone One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 32px;
+      display: flex;
+      align-items: flex-end;
+      letter-spacing: 0.05em;
+      color: #1863A6;
+    }
+    .download{
+      width: 180px;
+      height: 40px;
+      background: #1863A6;
+      border-radius: 40px;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+
+      span{
+        color: #ffffff;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 40px;
+        display: inline-block;
+        margin: 0 auto;
+      }
+      .btn-list{
+        position: absolute;
+        left: 0;
+        top: 60px;
+
+        .app-button{
+          cursor: pointer;
+          display: block;
+          width: 267px;
+          height: 77px;
+          background: url('../../assets/images/app-btn.png') center center no-repeat;
+          background-size: cover;
+        }
+        .apk-button{
+          cursor: pointer;
+          display: block;
+          width: 267px;
+          height: 77px;
+          background: url('../../assets/images/apk-btn.png') center center no-repeat;
+          background-size: cover;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  .octopus-bg{
+    width: 640px;
+    height: 663px;
+    position: relative;
+
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

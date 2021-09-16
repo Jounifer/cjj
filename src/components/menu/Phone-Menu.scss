@@ -1,0 +1,190 @@
+.phone-main-header, .phone-protocol-header{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 40px;
+  background: #2E3F77;
+  overflow: hidden;
+
+  .menu{
+      width: 100%;
+      height: 100%;
+      padding: 0 25px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img{
+          display: none;
+      }
+      ul{
+          display: flex;
+          align-items: center;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 40px;
+          height: 40px;
+  
+          li{
+              margin-right: 30px;
+  
+              &:last-child{
+                  margin-right: 0;
+              }
+              a{
+                  color: #ffffff;
+                  cursor: pointer;
+  
+                  &:hover{
+                      color: rgba(255, 255, 255, 0.7);
+                  }
+              }
+          }
+      }
+      .menu-button{
+          width: 40px;
+          height: 40px;
+          position: relative;
+  
+          i.line{
+              position: absolute;
+              background: #ffffff;
+              left: 10px;
+              height: 1px;
+              transition: all 0.5s;
+  
+              &.top{
+                  top: 13px;
+                  width: 20px;
+              }
+              &.center{
+                  top: 20px;
+                  width: 12px;
+              }
+              &.bottom{
+                  top: 27px;
+                  width: 20px;
+              }
+          }
+      }
+  }
+  .item-box{
+      width: 100%;
+      height: 0;
+      position: absolute;
+      left: 0;
+      top: 40px;
+
+      .model{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0);
+          transition: all 0.5s;
+      }
+      ul{
+          width: 100%;
+          max-height: 0;
+          padding: 0;
+          box-sizing: border-box;
+          background: #1D284E;
+          transition: all 0.5s;
+          overflow: hidden;
+          position: relative;
+          z-index: 99;
+
+          li{
+              width: 100%;
+              text-align: right;
+              cursor: pointer;
+
+              a{
+                  padding: 0 25px;
+                  font-family: Montserrat;
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 18px;
+                  line-height: 43px;
+                  height: 43px;
+                  color: #ffffff;
+                  display: block;
+              }
+          }
+      }
+  }
+  &.expanded{
+      overflow: unset;
+
+      .menu{
+          .menu-button{
+              i.top{
+                  transform: rotate(45deg);
+                  transform-origin: center;
+                  top: 20px;
+              }
+              i.center{
+                  display: none;
+              }
+              i.bottom{
+                  transform: rotate(-45deg);
+                  transform-origin: center;
+                  top: 20px;
+              }
+          }
+      }
+      .item-box{
+          height: calc(100vh - 40px);
+
+          ul{
+              max-height: 100vh;
+              padding: 12px 0;
+          }
+          .model{
+              background: rgba(0, 0, 0, 0.5);
+          }
+      }
+  }
+}
+
+.phone-protocol-header{
+  overflow: unset;
+
+  .menu{
+    .home{
+      position: absolute;
+      right: 0;
+      bottom: -40px;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px 0 14px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      color: #ffffff;
+      background: #637FDA;
+      cursor: pointer;
+
+      &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -10px;
+        border-left: 5px solid transparent;
+        border-top: 20px solid #637FDA;
+        border-right: 5px solid #637FDA;
+        border-bottom: 20px solid transparent;
+      }
+    }
+  }
+  .content{
+    padding-top: 40px;
+  }
+}
