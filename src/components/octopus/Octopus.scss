@@ -85,3 +85,22 @@
     }
   }
 }
+
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+  .octopus{
+    width: 993px;
+
+    .octopus-bg{
+      width: 482.7px;
+      height: 500px;
+      position: relative;
+  
+      img{
+        height: 500px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

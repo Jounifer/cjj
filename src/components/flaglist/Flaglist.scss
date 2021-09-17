@@ -20,7 +20,7 @@
         margin-top: 20px;
         font-family: PingFang SC;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 600;
         font-size: 20px;
         line-height: 30px;
         text-align: center;
@@ -28,5 +28,11 @@
         display: inline-block;
       }
     }
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+  .flag-list{
+    width: 993px;
   }
 }
