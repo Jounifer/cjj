@@ -1,0 +1,54 @@
+.protocol{
+  .content{
+      .title{
+
+          b{
+              font-style: normal;
+              font-weight: 600;
+              font-size: 48px;
+              color: #2E3F77;
+              margin-left: 16px;
+          }
+      }
+      p{
+          line-height: 24px;
+          letter-spacing: 0px;
+          margin-bottom: 18px;
+
+          span{
+              color: #2e3f77;
+              font-size: 14pt;
+          }
+          &.p-margin{
+              margin-bottom: 18px;
+          }
+      }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+    .protocol .content .title b{
+        font-size: 40px;
+    }
+    .protocol .content p span{
+        font-size: 16px;
+    }
+}
+
+.phone-protocol{
+    .content{
+        p{
+            line-height: 24px;
+            letter-spacing: 0px;
+            margin-bottom: 18px;
+
+            span{
+                color: #2e3f77;
+                font-size: 14px;
+            }
+            &.p-margin{
+                margin-bottom: 18px;
+            }
+        }
+    }
+}

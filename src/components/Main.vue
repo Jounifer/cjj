@@ -1,17 +1,27 @@
 <template>
-  <div class="main">
-    <common-menu></common-menu>
-    <octopus></octopus>
-    <flaglist></flaglist>
-    <process-list :list="list" :width="820"></process-list>
+  <div :class="screenRatio">
+    <div class="phone-bg" v-if="browser === 'phone'"></div>
+    <common-menu :className="`${menuClass}main-header`"></common-menu>
+    <octopus :className="`${menuClass}octopus`"></octopus>
+    <flaglist :className="`${menuClass}flag-list`"></flaglist>
+    <process-list
+      :list="list"
+      :width="820"
+      :height="397.5"
+      :className="`${menuClass}process-list`"></process-list>
+    <contact></contact>
   </div>
 </template>
 
 <script>
 import CommonMenu from './menu/Menu.vue'
-import Octopus from './octopus/Octopus'
-import Flaglist from './flaglist/Flaglist'
-import ProcessList from './process-list/ProcessList'
+import Octopus from './main/octopus/Octopus'
+import Flaglist from './main/flaglist/Flaglist'
+import ProcessList from './main/process-list/ProcessList'
+import Contact from './main/contact/Contact'
+import {
+  mapState,
+} from 'vuex'
 
 export default {
   name: 'Main',
@@ -20,6 +30,35 @@ export default {
     Octopus,
     Flaglist,
     ProcessList,
+    Contact,
+  },
+  computed: {
+    ...mapState({
+      browser: (state) => state.browser,
+    }),
+    screenRatio() {
+
+      
+      if (this.browser === 'phone') {
+
+        return 'phone-main';
+
+      }
+
+      return 'main';
+
+    },
+    menuClass() {
+
+      if (this.browser === 'phone') {
+
+        return 'phone-';
+
+      }
+
+      return '';
+
+    },
   },
   data() {
 
@@ -35,7 +74,7 @@ export default {
         },
         {
           date: '2021.09',
-          content: '登陆BSC开启流动性挖矿',
+          content: '登录BSC开启流动性挖矿',
         },
         {
           date: '2021.Q3',

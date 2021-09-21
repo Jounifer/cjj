@@ -58,7 +58,7 @@
           display: block;
           width: 267px;
           height: 77px;
-          background: url('../../assets/images/app-btn.png') center center no-repeat;
+          background: url('../../../assets/images/app-btn.png') center center no-repeat;
           background-size: cover;
         }
         .apk-button{
@@ -66,7 +66,7 @@
           display: block;
           width: 267px;
           height: 77px;
-          background: url('../../assets/images/apk-btn.png') center center no-repeat;
+          background: url('../../../assets/images/apk-btn.png') center center no-repeat;
           background-size: cover;
           margin-top: 20px;
         }
@@ -82,16 +82,18 @@
       position: absolute;
       top: 0;
       left: 0;
+      animation: octopus-move 5s linear	1s infinite;
+	    -webkit-animation: octopus-move 5s linear	1s infinite;
     }
   }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
   .octopus{
-    width: 993px;
+    width: 920px;
 
     .octopus-bg{
-      width: 482.7px;
+      width: 500px;
       height: 500px;
       position: relative;
   
@@ -102,5 +104,33 @@
         left: 0;
       }
     }
+    .octopus-content{
+      width: 420px;
+
+      p{
+        font-size: 40px;
+      }
+      span{
+        font-size: 14px;
+      }
+      .download{
+        .btn-list{
+  
+          .app-button,.apk-button{
+            width: 200px;
+            height: 58px;
+          }
+        }
+      }
+    }
   }
+}
+
+@keyframes octopus-move
+{
+0% {top: 0px;}
+30% {top: 50px;}
+50% {top: 0px;}
+75% {top: -50px;}
+100% {top: 0px;}
 }

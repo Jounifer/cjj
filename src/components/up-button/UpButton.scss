@@ -1,0 +1,23 @@
+.czr-btta{
+  position: fixed !important;
+  right: -45px;
+  bottom: 50px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  background: rgba(59,59,59,.2);
+  border-radius: 3px;
+
+  &:hover{
+      background: rgba(59,59,59,.8);
+  }
+  .icn-up-small{
+      width: 32px;
+      height: 32px;
+      background: url('../../assets/images/icn-up.png') center center no-repeat;
+  }
+}

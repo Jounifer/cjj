@@ -1,12 +1,24 @@
 <template>
-  <div class="main-header">
-    <template v-if="false">
+  <div :class="`${className} ${isExpand ? 'expanded' : ''}`">
+    <template v-if="className.indexOf('phone') > -1">
       <div class="menu">
         <ul v-if="isEn">
+          <li>
+            <img
+              src="../../assets/images/logo1.png"
+              height="30" alt=""
+              @click="toRouter('Main')">
+          </li>
           <li><a href="https://mining.opsnft.net">To Farm</a></li>
           <li><a href="https://pancakeswap.finance/swap?inputCurrency=0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56&outputCurrency=0xF878D657926BE3372e1f17973F289ffb6cd17c3b">Buy OPS</a></li>
         </ul>
         <ul v-else>
+          <li>
+            <img
+              src="../../assets/images/logo1.png"
+              height="30" alt=""
+              @click="toRouter('Main')">
+          </li>
           <li class="menu-text-space"><a href="https://mining.opsnft.net">农场</a></li>
           <li><a href="https://pancakeswap.finance/swap?inputCurrency=0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56&outputCurrency=0xF878D657926BE3372e1f17973F289ffb6cd17c3b">购买OPS</a></li>
         </ul>
@@ -15,10 +27,6 @@
           <i class="line center"></i>
           <i class="line bottom"></i>
         </div>
-        <div
-          class="home"
-          v-if="className === 'phone-protocol-header'"
-          @click="toRouter('Main')">{{isEn ? 'Home' : '首页'}}</div>
       </div>
       <div class="item-box">
         <ul v-if="isEn">

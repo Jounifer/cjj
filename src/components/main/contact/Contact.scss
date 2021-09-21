@@ -1,0 +1,79 @@
+.contact{
+  position: absolute !important;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  left: 42px;
+  bottom: 42px;
+
+  a{
+      cursor: pointer;
+      width: 28px;
+      transition: all 0.2s;
+      margin-right: 35px;
+
+      &.twitter{
+          height: 24px;
+          background: url('../../../assets/images/twitter-default.png') center center no-repeat;
+
+          &:hover{
+              background-image: url('../../../assets/images/twitter-hover.png');
+          }
+      }
+      &.telegram{
+          height: 23px;
+          background: url('../../../assets/images/telegram-default.png') center center no-repeat;
+
+          &:hover{
+              background-image: url('../../../assets/images/telegram-hover.png');
+          }
+      }
+      &.wechat{
+          height: 24px;
+          background: url('../../../assets/images/wechat-default.png') center center no-repeat;
+
+          .code{
+            width: 272px;
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+            position: absolute;
+            right: -88px;
+            top: -176px;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.5s;
+        
+            .wechat-code{
+              width: 126px;
+              height: 146px;
+              background-color: #ffffff;
+              border-radius: 12px;
+        
+              img{
+                  width: 100%;
+              }
+              span{
+                  display: block;
+                  font-family: PingFang SC;
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 12px;
+                  line-height: 12px;
+                  text-align: center;
+                  color: #000000;
+              }
+            }
+          }
+          &:hover{
+              background-image: url('../../../assets/images/wechat-hover.png');
+
+              .code{
+                  visibility: visible;
+                  opacity: 1;
+              }
+          }
+      }
+  }
+  
+}

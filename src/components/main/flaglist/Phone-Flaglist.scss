@@ -1,6 +1,6 @@
-.flag-list{
-  width: 1114px;
-  margin: 100px auto 0;
+.phone-flag-list{
+  width: 100%;
+  margin: 40px auto 0;
 
   ul{
     width: 100%;
@@ -8,9 +8,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     li{
       text-align: center;
+      width: 50%;
+      margin-bottom: 40px;
 
       img{
         display: block;
@@ -21,18 +24,12 @@
         font-family: PingFang SC;
         font-style: normal;
         font-weight: 600;
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 16px;
+        line-height: 22px;
         text-align: center;
         color: #1863A6;
         display: inline-block;
       }
     }
-  }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1400px) {
-  .flag-list{
-    width: 993px;
   }
 }

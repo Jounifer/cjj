@@ -1,0 +1,47 @@
+.flag-list{
+  width: 1114px;
+  margin: 100px auto 0;
+
+  ul{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    li{
+      text-align: center;
+
+      img{
+        display: block;
+        margin: 0 auto;
+      }
+      span{
+        margin-top: 20px;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        color: #1863A6;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+  .flag-list{
+    width: 920px;
+    margin-top: 170px;
+
+    ul{
+      li{
+        span{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
